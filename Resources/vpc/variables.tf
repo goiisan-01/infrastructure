@@ -1,4 +1,4 @@
 variable "vpc_cidr_block" {
   type = string
-  defualt = "10.20.0.0/16"
+  default = "10.20.0.0/16"
 }
