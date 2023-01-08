@@ -1,5 +1,6 @@
 resource "aws_nat_gateway" "main" {
   subnet_id     = aws_subnet.main.id
+  connectivity_type = "private"
 
   tags = {
     Name = var.ngw_name
