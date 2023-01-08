@@ -78,7 +78,7 @@ jobs:
   Prd-Deploy:
     name: 'Deploy Production ENV'
     runs-on: ubuntu-latest
-    needs: [Dev-Deploy]
+    needs: [Dev-Deploy, Stg-Deploy]
 
     steps:
     # Checkout the repository to the GitHub Actions runner
