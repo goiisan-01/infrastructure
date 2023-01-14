@@ -1,19 +1,19 @@
 resource "aws_security_group" "main" {
   name        = var.sg_name
-  vpc_id      = module.vpc.vpc_id
+  vpc_id      = var.vpc_id
 
   ingress {
     from_port        = 443
     to_port          = 443
     protocol         = "tcp"
-    cidr_blocks      = [module.vpc.vpc_cidr]
+    cidr_blocks      = [var.vpc_cidr]
   }
 
   ingress {
     from_port        = 80
     to_port          = 80
     protocol         = "tcp"
-    cidr_blocks      = [module.vpc.vpc_cidr]
+    cidr_blocks      = [var.vpc_cidr]
   }
 
   ingress {

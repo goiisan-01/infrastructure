@@ -1,6 +1,6 @@
 
 resource "aws_network_interface" "main" {
-  subnet_id   = module.vpc.subnet_id
+  subnet_id   = var.subnet_id
 }
 
 resource "aws_instance" "foo" {

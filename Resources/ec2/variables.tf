@@ -21,3 +21,15 @@ variable "sg_name" {
 variable "instance_profile" {
   type = string
 }
+
+variable "subnet_id" {
+  type = string
+}
+
+variable "vpc_id" {
+  type = string
+}
+
+variable "vpc_cidr" {
+  type = string
+}

@@ -7,4 +7,7 @@ module "ec2" {
   iam_policy        = "dev-iam=policy"
   sg_name           = "dev-security-group"
   instance_profile  = "dev-instance-profile"
+  subnet_id         = module.vpc.subnet_id
+  vpc_id            = module.vpc.vpc_id
+  vpc_cidr          = module.vpc.vpc_cidr
 }
