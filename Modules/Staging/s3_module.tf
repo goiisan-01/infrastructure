@@ -3,4 +3,5 @@ module "s3" {
 
   bucket_name          = "stg-s3-bucket-8989"
   env                  = "staging"
+  env_short            = "stg"
 }

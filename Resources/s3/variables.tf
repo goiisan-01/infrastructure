@@ -5,3 +5,7 @@ variable "bucket_name" {
 variable "env" {
   type = string
 }
+
+variable "env_short" {
+  type = string
+}
