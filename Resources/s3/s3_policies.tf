@@ -6,7 +6,8 @@ resource "aws_s3_bucket_policy" "main" {
 data "aws_iam_policy_document" "main" {
   statement {
     principals {
-      type        = "*"
+      type        = "AWS"
+      identifiers = ["*"]
     }
 
     actions = [
