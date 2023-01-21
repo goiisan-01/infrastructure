@@ -1,7 +1,10 @@
 resource "aws_route53_record" "main" {
   zone_id = "Z0527326Q1IRS4PX0WAW"
-  name    = var.env
-  type    = "CNAME"
+  name    = var.env_short
+  type    = "A"
   ttl     = 300
-  records = [aws_cloudfront_distribution.s3_distribution.id]
+  alias {
+    name                   = aws_cloudfront_distribution.s3_distribution.name
+    zone_id                = aws_cloudfront_distribution.s3_distribution.zone_id
+  }
 }
