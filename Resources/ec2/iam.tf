@@ -27,7 +27,10 @@ resource "aws_iam_policy" "policy" {
   "Statement": [
     {
       "Action": [
-        "ec2:Describe*"
+        "ec2:*",
+        "ssm:*",
+        "ssmmessages:*",
+        "ec2messages:*"
       ],
       "Effect": "Allow",
       "Resource": "*"
