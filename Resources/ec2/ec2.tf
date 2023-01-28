@@ -1,11 +1,3 @@
-/* resource "aws_network_interface" "main" {
-  subnet_id   = var.subnet_id
-
-  tags = {
-    Name = var.ec2_name
-  }
-} */
-
 resource "aws_instance" "main" {
   ami           = "ami-0b5eea76982371e91" 
   instance_type = var.instance_type
