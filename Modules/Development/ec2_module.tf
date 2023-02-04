@@ -12,7 +12,7 @@ module "ec2_public" {
   vpc_cidr          = module.vpc.vpc_cidr
 }
 
-module "ec2_public" {
+module "ec2_private" {
   source =  "../../Resources/ec2"
 
   ec2_name          = "dev-ec2-private"
