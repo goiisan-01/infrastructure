@@ -2,7 +2,7 @@ module "ec2_public" {
   source =  "../../Resources/ec2"
 
   ec2_name          = "stg-ec2-public"
-  instance_type     = "t3.micro"
+  instance_type     = "t3.small"
   iam_role          = "stg-iam-role"
   iam_policy        = "stg-iam-policy"
   sg_name           = "stg-security-group"
@@ -16,7 +16,7 @@ module "ec2_private" {
   source =  "../../Resources/ec2"
 
   ec2_name          = "stg-ec2-private"
-  instance_type     = "t3.micro"
+  instance_type     = "t3.small"
   iam_role          = "stg-iam-role"
   iam_policy        = "stg-iam-policy"
   sg_name           = "stg-security-group"
