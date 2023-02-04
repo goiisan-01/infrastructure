@@ -10,6 +10,7 @@ module "ec2_public" {
   subnet_id         = module.vpc.public_subnet_id
   vpc_id            = module.vpc.vpc_id
   vpc_cidr          = module.vpc.vpc_cidr
+  associate_public_ip = true
 }
 
 module "ec2_private" {
@@ -24,4 +25,5 @@ module "ec2_private" {
   subnet_id         = module.vpc.private_subnet_id
   vpc_id            = module.vpc.vpc_id
   vpc_cidr          = module.vpc.vpc_cidr
+  associate_public_ip = false
 }
