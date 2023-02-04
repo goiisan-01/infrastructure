@@ -6,10 +6,10 @@ resource "aws_route_table" "public" {
     gateway_id = aws_internet_gateway.gw.id
   }
 
-  route {
-    cidr_block = var.vpc_cidr_block
-    gateway_id = "local"
-  }
+#  route {
+#    cidr_block = var.vpc_cidr_block
+#    gateway_id = "local"
+#  }
 
   tags = {
     Name = var.public_route_table
@@ -24,10 +24,10 @@ resource "aws_route_table" "private" {
     gateway_id = aws_nat_gateway.main.id
   }
 
-  route {
-    cidr_block = var.vpc_cidr_block
-    gateway_id = "local"
-  }
+#  route {
+#    cidr_block = var.vpc_cidr_block
+#    gateway_id = "local"
+#  }
 
   tags = {
     Name = var.private_route_table
