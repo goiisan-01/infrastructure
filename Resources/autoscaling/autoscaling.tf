@@ -2,7 +2,9 @@ resource "aws_launch_template" "main" {
   name_prefix   = var.ec2_name
   image_id      = "ami-0b5eea76982371e91" 
   instance_type = var.instance_type
-  iam_instance_profile = aws_iam_instance_profile.profile.name
+  iam_instance_profile {
+    name = aws_iam_instance_profile.profile.name
+  }
 }
 
 resource "aws_autoscaling_group" "main" {
