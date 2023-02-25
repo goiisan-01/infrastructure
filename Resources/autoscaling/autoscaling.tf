@@ -12,8 +12,8 @@ resource "aws_autoscaling_group" "main" {
   desired_capacity   = 3
   max_size           = 10
   min_size           = 1
-  load_balancers     = aws_lb.main.id
-  #target_group_arns = 
+  #load_balancers     = aws_lb.main.id
+  target_group_arns = [aws_lb_target_group.main.arn]
 
   launch_template {
     id      = aws_launch_template.main.id
