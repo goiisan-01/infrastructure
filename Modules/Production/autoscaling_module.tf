@@ -1,4 +1,4 @@
-module "ec2_private" {
+module "autoscaling" {
   source =  "../../Resources/autoscaling"
 
   ec2_name            = "dev-asg-private"
