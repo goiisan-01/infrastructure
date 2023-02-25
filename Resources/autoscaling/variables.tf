@@ -37,3 +37,7 @@ variable "vpc_cidr" {
 # variable "associate_public_ip" {
 #   type = bool
 # }
+
+variable "env_short" {
+  type = string
+}

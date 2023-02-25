@@ -11,4 +11,5 @@ module "autoscaling" {
   vpc_id              = module.vpc.vpc_id
   vpc_cidr            = module.vpc.vpc_cidr
   # associate_public_ip = false
+  env_short            = "stg-elb"
 }
