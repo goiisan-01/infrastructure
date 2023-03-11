@@ -2,6 +2,7 @@ resource "aws_launch_template" "main" {
   name_prefix   = var.ec2_name
   image_id      = "ami-0b5eea76982371e91" 
   instance_type = var.instance_type
+  user_data = filebase64("${path.module}/user_data.sh")
   iam_instance_profile {
     name = aws_iam_instance_profile.profile.name
   }

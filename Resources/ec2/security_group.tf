@@ -16,14 +16,6 @@ resource "aws_security_group" "main" {
     cidr_blocks      = ["0.0.0.0/0"]
   }
 
-
-  ingress {
-    from_port        = 9000 # for HTTP connection
-    to_port          = 9000 # for HTTP connection
-    protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]
-  }
-  
   ingress {
     from_port        = 22 # for SSH connection
     to_port          = 22 # for SSH connection
