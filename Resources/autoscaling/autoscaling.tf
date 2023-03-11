@@ -9,12 +9,12 @@ resource "aws_launch_template" "main" {
 }
 
 resource "aws_autoscaling_group" "main" {
-  availability_zones = ["us-east-1a"]
-  desired_capacity   = 2
-  max_size           = 10
-  min_size           = 1
-  target_group_arns = [aws_lb_target_group.main.arn]
-  vpc_zone_identifier       = [[var.subnet_id, var.subnet_id_2]]
+  availability_zones  = ["us-east-1a"]
+  desired_capacity    = 2
+  max_size            = 10
+  min_size            = 1
+  target_group_arns   = [aws_lb_target_group.main.arn]
+  vpc_zone_identifier = [var.subnet_id, var.subnet_id_2]
 
   launch_template {
     id      = aws_launch_template.main.id
