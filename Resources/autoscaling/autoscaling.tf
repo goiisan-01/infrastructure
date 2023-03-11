@@ -9,7 +9,7 @@ resource "aws_launch_template" "main" {
 }
 
 resource "aws_autoscaling_group" "main" {
-  availability_zones  = ["us-east-1a"]
+  #availability_zones  = ["us-east-1a"]
   desired_capacity    = 2
   max_size            = 10
   min_size            = 1
